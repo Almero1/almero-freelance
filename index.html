@@ -1,0 +1,92 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Almero Freelance</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0d0d18;color:#f6f5ff;font-family:Arial,sans-serif}
+header,main,footer{max-width:900px;margin:auto;padding:20px}
+header{display:flex;justify-content:space-between;align-items:center}
+.logo{background:linear-gradient(120deg,#8b5cf6,#ec4899);padding:12px;border-radius:12px;font-weight:bold}
+h1{font-size:42px}
+h1 span{color:#d99be9}
+p{color:#b6b4ce;line-height:1.7}
+.btn{display:inline-block;background:linear-gradient(120deg,#8b5cf6,#ec4899);color:white;padding:13px 18px;border-radius:10px;text-decoration:none;border:0;font-weight:bold}
+.card{background:#19192b;border:1px solid #30304a;border-radius:18px;padding:20px;margin:15px 0}
+.price{font-size:36px;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+input,select{display:block;width:100%;padding:13px;margin:8px 0 15px;background:#10101c;color:white;border:1px solid #393951;border-radius:9px}
+label{font-size:14px}
+small{color:#aaa9c5}
+@media(max-width:600px){h1{font-size:34px}.grid{grid-template-columns:1fr}header,main,footer{padding:16px}}
+</style>
+</head>
+<body>
+<header>
+  <div><span class="logo">A</span> <b>ALMERO FREELANCE</b></div>
+  <a class="btn" href="#daftar">Gabung</a>
+</header>
+<main>
+  <section>
+    <p>PLATFORM LAYANAN DIGITAL</p>
+    <h1>Mulai berkarya.<br><span>Bangun peluangmu.</span></h1>
+    <p>Temukan peluang freelance, kembangkan keahlian, dan mulai membangun pengalaman melalui tugas digital.</p>
+    <a class="btn" href="#daftar">Daftar Rp15.000</a>
+    <div class="card">
+      <small>PAKET KEANGGOTAAN</small>
+      <div class="price">Rp15.000</div>
+      <p>Rencana manfaat keanggotaan:</p>
+      <p>✓ Akses daftar tugas freelance</p>
+      <p>✓ Panduan layanan digital</p>
+      <p>✓ Informasi aktivitas anggota</p>
+      <small>Pembayaran belum aktif. Jangan transfer uang melalui prototipe ini.</small>
+    </div>
+  </section>
+  <section id="layanan">
+    <h2>Layanan Digital</h2>
+    <div class="grid">
+      <div class="card"><h3>🎨 Desain Kreatif</h3><p>Poster, thumbnail, dan desain promosi.</p></div>
+      <div class="card"><h3>🎬 Edit Video</h3><p>Editing video pendek dan subtitle.</p></div>
+      <div class="card"><h3>📣 Media Sosial</h3><p>Penjadwalan konten dan analisis performa.</p></div>
+    </div>
+  </section>
+  <section id="pekerjaan">
+    <h2>Contoh Tugas Freelance</h2>
+    <div class="card"><h3>Desain poster sederhana</h3><p>Contoh bayaran Rp25.000–Rp50.000</p><small>Ilustrasi, bukan lowongan aktif.</small></div>
+    <div class="card"><h3>Edit video pendek</h3><p>Contoh bayaran Rp30.000–Rp75.000</p><small>Ilustrasi, bukan lowongan aktif.</small></div>
+    <div class="card"><h3>Menulis deskripsi produk</h3><p>Contoh bayaran Rp15.000–Rp35.000</p><small>Ilustrasi, bukan lowongan aktif.</small></div>
+  </section>
+  <section id="daftar" class="card">
+    <h2>Formulir Minat Anggota</h2>
+    <p>Ini formulir demo. Data tidak dikirim atau disimpan di server.</p>
+    <form id="form">
+      <label>Nama panggilan</label>
+      <input id="nama" required maxlength="60" placeholder="Masukkan nama">
+      <label>Email</label>
+      <input id="email" type="email" required placeholder="nama@email.com">
+      <label>Layanan yang diminati</label>
+      <select id="minat">
+        <option>Desain kreatif</option>
+        <option>Edit video</option>
+        <option>Dukungan media sosial</option>
+        <option>Belajar freelance</option>
+      </select>
+      <button class="btn" type="submit">Daftar Demo</button>
+    </form>
+    <p id="hasil"></p>
+  </section>
+</main>
+<footer><small>© Almero Freelance — prototipe awal. Belum ada akun, pembayaran, atau pencairan saldo sungguhan.</small></footer>
+<script>
+document.getElementById("form").addEventListener("submit",function(e){
+  e.preventDefault();
+  document.getElementById("hasil").textContent=
+    "Halo "+document.getElementById("nama").value+
+    "! Formulir ini hanya demo dan belum menyimpan data.";
+});
+</script>
+</body>
+</html>
